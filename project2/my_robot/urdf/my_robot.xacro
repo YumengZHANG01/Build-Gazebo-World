@@ -83,10 +83,9 @@
      <geometry>
        <cylinder radius ="0.1" length="0.05"/>
      </geometry>
-     <material name="Cyan">
-     <color rgba="0 255 1.0 1.0"/>
-     </material>
+
    </visual>
+  
 
    <collision>
      <origin xyz="0 0 0" rpy="0 1.5707 1.5707"/>
@@ -110,9 +109,11 @@
      <geometry>
        <cylinder radius ="0.1" length="0.05"/>
      </geometry>
-     <material name="Cyan">
-     <color rgba="0 255 1.0 1.0"/>
-     </material>
+
+    <material name="red">
+        <color rgba="255 0.1 0.1 1"/>
+      </material>
+
    </visual>
 
    <collision>
@@ -136,10 +137,7 @@
      <geometry>
        <box size=".05 .05 .05"/>
      </geometry>
-
-     <material name="Cyan">
-     <color rgba="0 1.0 1.0 1.0"/>
-     </material>
+    
    </visual>
 
    <collision>
@@ -207,6 +205,12 @@
     <parent link="chassis"/>
     <axis xyz="0 1 0" rpy="0 0 0"/>
   </joint>
+ 
+ <gazebo reference="chassis"> <material>Gazebo/Yellow</material> </gazebo>
+ <gazebo reference="rightWheel"> <material>Gazebo/Green</material> </gazebo>
+ <gazebo reference="leftWheel"> <material>Gazebo/Green</material> </gazebo>
+ <gazebo reference="camera"> <material>Gazebo/Red</material> </gazebo>
+
 
 </robot>
 
